@@ -553,3 +553,545 @@ footer{text-align:center;padding:18px;background:#211914;color:#e9d9b8;font:9px 
   /* Story */
   #story{
     padding-top:85px;
+  }
+
+  .story-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .story-copy{
+    text-align:center;
+  }
+
+  .story-copy h3,
+  .details h3{
+    font-size:clamp(42px,12vw,56px);
+    line-height:.95;
+  }
+
+  .story-copy p{
+    font-size:18px;
+    line-height:1.45;
+  }
+
+  .story-card{
+    min-height:300px;
+    padding:20px;
+  }
+
+  .mandala{
+    width:min(250px,72vw);
+  }
+
+  /* Details */
+  #details{
+    padding-top:85px;
+  }
+
+  .details .lead{
+    font-size:18px;
+    line-height:1.4;
+    margin:10px auto 25px;
+    max-width:330px;
+  }
+
+  .detail-row{
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:340px;
+    margin:22px auto;
+  }
+
+  .detail{
+    padding:21px 12px;
+  }
+
+  .detail:not(:last-child):after{
+    right:12%;
+    left:12%;
+    top:auto;
+    bottom:0;
+    width:auto;
+    height:1px;
+  }
+
+  .detail strong{
+    font-size:25px;
+  }
+
+  .detail em{
+    font-size:15px;
+  }
+
+  .venue{
+    font-size:24px;
+    line-height:1.1;
+  }
+
+  .address{
+    font-size:16px;
+    line-height:1.4;
+  }
+
+  .actions{
+    gap:8px;
+  }
+
+  .action{
+    padding:11px 14px;
+    font-size:9px;
+    letter-spacing:.10em;
+  }
+
+  /* Countdown */
+  #countdown{
+    padding:48px 12px;
+  }
+
+  .count-title{
+    font-size:9px;
+    line-height:1.5;
+    max-width:300px;
+    margin:auto;
+  }
+
+  .timer{
+    gap:8px;
+    margin-top:22px;
+  }
+
+  .timer .unit{
+    min-width:62px;
+  }
+
+  .timer b{
+    font-size:36px;
+  }
+
+  .timer span{
+    font-size:8px;
+  }
+
+  /* Closing */
+  #closing{
+    min-height:70svh;
+    padding:75px 15px 55px;
+  }
+
+  .closing-card{
+    padding:45px 18px;
+    width:100%;
+  }
+
+  .closing-card h3{
+    font-size:clamp(55px,17vw,82px);
+  }
+
+  .closing-card p{
+    font-size:18px;
+    line-height:1.4;
+  }
+
+  .signature{
+    font-size:38px;
+  }
+
+  footer{
+    font-size:8px;
+    line-height:1.5;
+    padding:16px 12px;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width:380px){
+  .intro-card{
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .hero h2{
+    font-size:58px;
+  }
+
+  .couple-photo{
+    max-height:250px;
+  }
+
+  .names{
+    font-size:24px;
+  }
+
+  .timer .unit{
+    min-width:55px;
+  }
+
+  .timer b{
+    font-size:31px;
+  }
+}
+
+
+/* ---------- SECOND & THIRD PAGE HEADING FIX ---------- */
+@media (max-width:700px){
+
+  /* Give the headings their own safe vertical area */
+  #story,
+  #details{
+    overflow: visible;
+  }
+
+  #story .section-inner,
+  #details .section-inner{
+    width:100%;
+    max-width:100%;
+    position:relative;
+    z-index:5;
+  }
+
+  #story .story-copy{
+    position:relative;
+    z-index:6;
+    padding:18px 8px 0;
+  }
+
+  #story .story-copy h3{
+    position:relative;
+    z-index:7;
+    margin:20px auto 24px;
+    padding:0 8px;
+    max-width:340px;
+    font-size:clamp(39px,10.5vw,52px);
+    line-height:1.08;
+    letter-spacing:-.01em;
+  }
+
+  #story .story-copy p{
+    position:relative;
+    z-index:7;
+    max-width:330px;
+    margin:0 auto;
+  }
+
+  #story .floral-border,
+  #details .floral-border{
+    z-index:0;
+    height:72px;
+    opacity:.48;
+  }
+
+  #details .details{
+    position:relative;
+    z-index:6;
+    padding-top:28px;
+  }
+
+  #details .details .eyebrow{
+    position:relative;
+    z-index:7;
+    margin-bottom:16px;
+  }
+
+  #details .details h3{
+    position:relative;
+    z-index:7;
+    max-width:340px;
+    margin:14px auto 20px;
+    padding:0 10px;
+    font-size:clamp(39px,10.5vw,53px);
+    line-height:1.08;
+    letter-spacing:-.01em;
+  }
+
+  #details .details .lead{
+    position:relative;
+    z-index:7;
+    margin-top:0;
+  }
+}
+
+
+/* ---------- FINAL MOBILE TOP-SPACING FIX ---------- */
+@media (max-width:700px){
+
+  /* The hanging floral decoration gets its own space.
+     Nothing below it is allowed to occupy the same area. */
+  #story,
+  #details{
+    padding-top:170px !important;
+  }
+
+  #story .garland,
+  #details .garland{
+    height:82px;
+    z-index:0;
+    overflow:hidden;
+    opacity:.72;
+  }
+
+  #story .section-inner,
+  #details .section-inner{
+    margin-top:0;
+    padding-top:0;
+  }
+
+  #story .story-copy,
+  #details .details{
+    padding-top:0 !important;
+    margin-top:0 !important;
+  }
+
+  #story .story-copy .eyebrow,
+  #details .details .eyebrow{
+    display:block;
+    position:relative;
+    margin:0 auto 20px !important;
+    padding:0;
+    line-height:1.5;
+    text-align:center;
+  }
+
+  #story .story-copy h3,
+  #details .details h3{
+    display:block;
+    position:relative;
+    margin:0 auto 24px !important;
+    padding:0 10px;
+    line-height:1.12 !important;
+    max-width:340px;
+    text-align:center;
+  }
+
+  #story .story-copy p,
+  #details .details .lead{
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Keep the two headings comfortably separated from the decoration
+     even on very small phones. */
+  @media (max-width:380px){
+    #story,
+    #details{
+      padding-top:155px !important;
+    }
+
+    #story .story-copy .eyebrow,
+    #details .details .eyebrow{
+      margin-bottom:18px !important;
+      font-size:9px;
+    }
+
+    #story .story-copy h3,
+    #details .details h3{
+      font-size:40px !important;
+      line-height:1.14 !important;
+    }
+  }
+}
+
+
+/* =========================================================
+   FINAL RESPONSIVE LAYOUT
+   One layout that adapts cleanly to desktop + mobile.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.section-inner {
+  width: min(1060px, calc(100% - 40px));
+  max-width: 1060px;
+}
+
+/* Keep decorative florals visually behind content */
+.floral-border {
+  z-index: 0 !important;
+}
+
+.hero,
+.story-grid,
+.details,
+.rsvp-grid,
+.closing-card {
+  position: relative;
+  z-index: 5;
+}
+
+/* Couple image */
+.couple-photo-wrap {
+  width: min(620px, 92vw);
+  margin: clamp(18px, 3vw, 34px) auto 4px;
+}
+
+.couple-photo {
+  display: block;
+  width: 100%;
+  max-height: min(470px, 48vh);
+  object-fit: contain;
+}
+
+/* ---------------- DESKTOP ---------------- */
+@media (min-width: 761px) {
+
+  section {
+    min-height: 660px;
+    padding: 120px 20px 90px;
+  }
+
+  #home {
+    padding-top: 80px;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero .tiny {
+    margin-bottom: 20px;
+  }
+
+  .hero h2 {
+    margin: -4px 0 12px;
+  }
+
+  .date-line {
+    flex-wrap: wrap;
+  }
+
+  #story {
+    padding-top: 125px;
+  }
+
+  #story .story-copy {
+    padding-top: 15px;
+  }
+
+  #details {
+    padding-top: 125px;
+  }
+
+  #details .details {
+    padding-top: 10px;
+  }
+
+  #rsvp {
+    padding-top: 115px;
+  }
+
+  .couple-photo-wrap {
+    max-width: 620px;
+  }
+}
+
+/* ---------------- TABLET / MOBILE ---------------- */
+@media (max-width: 760px) {
+
+  section {
+    min-height: auto;
+    padding: 125px 16px 65px;
+  }
+
+  .section-inner {
+    width: min(100%, 560px);
+  }
+
+  /* Never allow the decorative top border to overlap content */
+  .floral-border {
+    height: 75px;
+    opacity: .48;
+  }
+
+  /* HOME */
+  #home {
+    min-height: 100svh;
+    padding: 100px 14px 45px;
+    display: flex;
+    align-items: center;
+  }
+
+  #home .hero {
+    width: 100%;
+    padding: 20px 0 0;
+  }
+
+  .hero .tiny {
+    margin-top:12px;
+    max-width: 300px;
+    margin: 0 auto 17px;
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .hero .script {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .hero h2 {
+    margin: 5px 0 0;
+    font-size: clamp(58px, 17vw, 88px);
+    line-height: .86;
+  }
+
+  .names {
+    margin: 14px auto 0;
+    font-size: clamp(24px, 7.5vw, 40px);
+    line-height: 1.1;
+  }
+
+  .date-line {
+    width: min(330px, 100%);
+    margin: 17px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .date-line i {
+    width: 26px;
+    height: 1px;
+    margin: 3px auto;
+  }
+
+  .couple-photo-wrap {
+    width: min(360px, 92vw);
+    margin: 18px auto 0;
+  }
+
+  .couple-photo {
+    max-height: 300px;
+  }
+
+  .scroll-note {
+    margin-top: 22px;
+    font-size: 8px;
+  }
+
+  /* STORY */
+  #story {
+    padding-top: 130px;
+    padding-bottom: 65px;
+  }
+
