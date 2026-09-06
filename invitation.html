@@ -1,1 +1,555 @@
-Hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravi Adhithya & Haripritha — Engagement</title>
+<meta property="og:title" content="Ravi Adhithya & Haripritha — Engagement Invitation">
+<meta property="og:description" content="You are invited to celebrate the engagement of Ravi Adhithya & Haripritha on Sunday, November 1, 2026 at Preethika Mahal, Chennai.">
+<meta property="og:image" content="og-preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ravi Adhithya & Haripritha — Engagement Invitation">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-preview.png">
+<meta name="description" content="Engagement invitation for Ravi Adhithya & Haripritha — Sunday, November 1, 2026, Preethika Mahal, Chennai.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --cream:#f8f0df;
+  --paper:#fffaf0;
+  --gold:#b58a3b;
+  --deep-gold:#7e5b22;
+  --maroon:#6d1f2b;
+  --green:#314b32;
+  --pink:#b95d70;
+  --ink:#35251d;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#241d18;
+  color:var(--ink);
+  font-family:'Cormorant Garamond',serif;
+  overflow-x:hidden;
+}
+button,a{font:inherit}
+
+/* ---------- OPENING ---------- */
+#intro{
+  min-height:100svh;
+  position:fixed;
+  inset:0;
+  z-index:50;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 50% 45%, #fff8e8 0%, #e7d1a5 55%, #9e7438 140%);
+  transition:opacity 1s ease, visibility 1s ease;
+}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+
+.intro-card{
+  width:min(88vw,620px);
+  min-height:75vh;
+  padding:55px 35px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  border:1px solid rgba(126,91,34,.55);
+  box-shadow:0 25px 80px rgba(0,0,0,.28);
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,.75), rgba(248,240,223,.94)),
+    repeating-linear-gradient(0deg,transparent 0 3px,rgba(126,91,34,.025) 4px);
+  overflow:hidden;
+}
+.intro-card:before,.intro-card:after{
+  content:"";
+  position:absolute;
+  width:170px;height:170px;
+  border:1px solid var(--gold);
+  transform:rotate(45deg);
+  opacity:.35;
+}
+.intro-card:before{top:-100px;left:-100px}
+.intro-card:after{bottom:-100px;right:-100px}
+
+.eyebrow{
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  font:500 11px 'Montserrat',sans-serif;
+  color:var(--deep-gold);
+}
+.script{
+  font-family:'Great Vibes',cursive;
+  color:var(--deep-gold);
+  font-weight:400;
+}
+.intro-card h1{
+  margin:15px 0 4px;
+  font-size:clamp(46px,9vw,82px);
+  font-weight:500;
+  line-height:.9;
+}
+.intro-card p{
+  font-size:20px;
+  margin:10px 0 30px;
+}
+.seal{
+  width:88px;height:88px;border-radius:50%;
+  border:1px solid var(--gold);
+  display:grid;place-items:center;
+  margin:8px 0 32px;
+  color:var(--maroon);
+  font-size:32px;
+  box-shadow:inset 0 0 0 6px rgba(181,138,59,.08);
+}
+.open-btn{
+  border:1px solid var(--deep-gold);
+  background:transparent;
+  color:var(--deep-gold);
+  padding:15px 32px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font:600 11px 'Montserrat',sans-serif;
+  cursor:pointer;
+  transition:.3s;
+}
+.open-btn:hover{background:var(--deep-gold);color:white;transform:translateY(-2px)}
+.hint{margin-top:14px!important;font:10px 'Montserrat',sans-serif!important;opacity:.6}
+
+/* ---------- SITE ---------- */
+main{background:var(--cream)}
+section{
+  position:relative;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:90px 20px;
+  overflow:hidden;
+}
+.section-inner{
+  width:min(1100px,94vw);
+  position:relative;
+  z-index:2;
+}
+
+/* floral border / hanging garland */
+.garland{
+  position:absolute;
+  top:0;left:0;right:0;
+  height:145px;
+  pointer-events:none;
+}
+.strand{
+  position:absolute;
+  top:0;
+  width:2px;
+  background:linear-gradient(var(--gold),rgba(181,138,59,.05));
+  transform-origin:top;
+}
+.flower{
+  position:absolute;
+  bottom:-8px;left:50%;
+  transform:translateX(-50%);
+  width:22px;height:32px;
+}
+.flower:before,.flower:after{
+  content:"";
+  position:absolute;
+  width:14px;height:22px;
+  border-radius:70% 25% 70% 25%;
+  background:var(--pink);
+}
+.flower:before{left:0;transform:rotate(-28deg)}
+.flower:after{right:0;transform:rotate(28deg)}
+.leaf{
+  position:absolute;
+  width:28px;height:12px;
+  background:var(--green);
+  border-radius:100% 0;
+}
+.leaf.l{left:-22px;bottom:7px;transform:rotate(-25deg)}
+.leaf.r{right:-22px;bottom:7px;transform:scaleX(-1) rotate(-25deg)}
+
+.frame{
+  border:1px solid rgba(126,91,34,.6);
+  outline:1px solid rgba(126,91,34,.25);
+  outline-offset:8px;
+}
+.ornament{
+  color:var(--gold);
+  font-size:26px;
+  letter-spacing:.2em;
+}
+
+/* ---------- HERO ---------- */
+#home{
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255,255,255,.65), transparent 50%),
+    linear-gradient(135deg,#f9f2e2,#ead8b5);
+}
+.hero{
+  text-align:center;
+  padding:90px 25px;
+  max-width:900px;
+  margin:auto;
+}
+.hero .tiny{font:500 12px 'Montserrat',sans-serif;letter-spacing:.3em;color:var(--deep-gold);margin-top:14px;}
+.hero h2{
+  margin:12px 0 0;
+  font-size:clamp(58px,10vw,112px);
+  font-weight:500;
+  line-height:.82;
+}
+.names{
+  margin:22px 0;
+  color:var(--maroon);
+  font-size:clamp(28px,5vw,55px);
+  letter-spacing:.03em;
+}
+.names span{font-family:'Great Vibes';font-size:.7em;color:var(--gold)}
+.date-line{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:22px;
+  font-size:19px;
+  margin:22px auto;
+}
+.date-line i{height:42px;width:1px;background:var(--gold)}
+.scroll-note{
+  margin-top:50px;
+  font:10px 'Montserrat',sans-serif;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--deep-gold);
+  animation:breathe 2s infinite;
+}
+@keyframes breathe{50%{opacity:.35;transform:translateY(5px)}}
+
+/* ---------- STORY ---------- */
+#story{background:#f7efdf}
+.story-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+.story-copy h3,.details h3{
+  font-size:52px;
+  font-weight:500;
+  margin:0 0 10px;
+  color:var(--maroon);
+}
+.story-copy p{
+  font-size:21px;
+  line-height:1.45;
+  max-width:520px;
+}
+.story-card{
+  min-height:460px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  background:rgba(255,250,240,.6);
+  padding:30px;
+}
+.mandala{
+  width:min(330px,70vw);
+  aspect-ratio:1;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:grid;place-items:center;
+  position:relative;
+}
+.mandala:before,.mandala:after{
+  content:"";
+  position:absolute;
+  inset:25px;
+  border:1px solid var(--gold);
+  transform:rotate(45deg);
+}
+.mandala:after{inset:55px;border-radius:50%}
+.mandala-center{text-align:center;z-index:2}
+.mandala-center .heart{font-size:58px;color:var(--maroon)}
+.mandala-center div{font:10px 'Montserrat';letter-spacing:.25em;text-transform:uppercase}
+
+/* ---------- DETAILS ---------- */
+#details{
+  background:
+    radial-gradient(circle at 20% 80%,rgba(185,93,112,.08),transparent 30%),
+    radial-gradient(circle at 80% 20%,rgba(49,75,50,.08),transparent 30%),
+    var(--paper);
+}
+.details{text-align:center}
+.details .lead{font-size:21px;margin-bottom:38px}
+.detail-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(126,91,34,.4);
+  border-bottom:1px solid rgba(126,91,34,.4);
+  margin:30px auto;
+  max-width:900px;
+}
+.detail{
+  padding:35px 20px;
+  position:relative;
+}
+.detail:not(:last-child):after{
+  content:"";position:absolute;right:0;top:25%;height:50%;width:1px;background:rgba(126,91,34,.35)
+}
+.detail small{
+  font:10px 'Montserrat';letter-spacing:.2em;text-transform:uppercase;color:var(--deep-gold)
+}
+.detail strong{display:block;font-size:30px;font-weight:600;color:var(--maroon);margin-top:8px}
+.detail em{font-style:normal;font-size:18px}
+.venue{
+  font-size:29px;
+  color:var(--maroon);
+  margin-top:18px;
+}
+.address{font-size:18px;line-height:1.45}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.action{
+  text-decoration:none;
+  border:1px solid var(--gold);
+  color:var(--deep-gold);
+  padding:12px 20px;
+  font:600 10px 'Montserrat';
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  background:transparent;
+  cursor:pointer;
+}
+.action:hover{background:var(--deep-gold);color:#fff}
+
+/* ---------- COUNTDOWN ---------- */
+#countdown{
+  min-height:auto;
+  padding:65px 20px;
+  background:var(--maroon);
+  color:#fff7e9;
+  text-align:center;
+}
+#countdown .section-inner{max-width:850px}
+.count-title{font:10px 'Montserrat';letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.timer{
+  display:flex;
+  justify-content:center;
+  gap:clamp(12px,4vw,45px);
+  margin-top:20px;
+}
+.timer .unit{min-width:70px}
+.timer b{display:block;font-family:'Montserrat',sans-serif;font-size:clamp(38px,7vw,70px);font-weight:500;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1;line-height:1}
+.timer span{font:9px 'Montserrat';letter-spacing:.2em;opacity:.7}
+
+/* ---------- CLOSING ---------- */
+#closing{
+  min-height:75svh;
+  background:linear-gradient(#f8f0df,#e7d0a3);
+  text-align:center;
+}
+.closing-card{padding:60px 25px}
+.closing-card h3{font-size:clamp(58px,10vw,100px);margin:0;color:var(--maroon);font-weight:500}
+.closing-card p{font-size:23px;max-width:650px;margin:15px auto 35px;line-height:1.4}
+.signature{font-family:'Great Vibes';font-size:43px;color:var(--deep-gold)}
+footer{text-align:center;padding:18px;background:#211914;color:#e9d9b8;font:9px 'Montserrat';letter-spacing:.2em}
+
+/* ---------- reveal animations ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:700px){
+  section{padding:75px 15px}
+  .story-grid{grid-template-columns:1fr}
+  .story-card{min-height:350px}
+  .detail-row{grid-template-columns:1fr}
+  .detail:not(:last-child):after{right:15%;left:15%;top:auto;bottom:0;width:auto;height:1px}
+  .detail{padding:25px}
+  .detail strong{font-size:26px}
+  .hero h2{font-size:65px}
+}
+
+/* ---------- COUPLE PORTRAIT ---------- */
+.couple-photo-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:28px auto 8px;
+  width:min(720px,94vw);
+  position:relative;
+}
+.couple-photo{
+  display:block;
+  width:min(680px,94vw);
+  max-height:480px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 22px rgba(61,40,25,.16));
+  animation:coupleFloat 5s ease-in-out infinite;
+}
+@keyframes coupleFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+@media(max-width:700px){
+  .couple-photo-wrap{margin-top:22px}
+  .couple-photo{max-height:390px}
+}
+
+
+/* ---------- MOBILE LAYOUT FIX ---------- */
+@media (max-width:700px){
+
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  section{
+    min-height:auto;
+    width:100%;
+    padding:115px 14px 60px;
+  }
+
+  /* Keep the hanging flowers behind the content instead of over it */
+  .garland{
+    height:92px;
+    z-index:0;
+  }
+
+  .section-inner{
+    width:100%;
+    max-width:100%;
+  }
+
+  /* Opening screen */
+  #intro{
+    padding:12px;
+  }
+
+  .intro-card{
+    width:100%;
+    min-height:calc(100svh - 24px);
+    max-height:none;
+    padding:45px 20px 35px;
+  }
+
+  .intro-card .eyebrow{
+    font-size:9px;
+    letter-spacing:.22em;
+  }
+
+  .intro-card h1{
+    font-size:clamp(52px,17vw,72px);
+  }
+
+  .intro-card p{
+    font-size:17px;
+    line-height:1.35;
+  }
+
+  .seal{
+    width:72px;
+    height:72px;
+    margin:8px 0 24px;
+  }
+
+  .open-btn{
+    padding:13px 22px;
+  }
+
+  /* First invitation screen */
+  #home{
+    padding-top:105px;
+    padding-bottom:55px;
+  }
+
+  .hero{
+    width:100%;
+    padding:25px 4px 10px;
+  }
+
+  .hero .tiny{
+    font-size:9px;
+    line-height:1.5;
+    letter-spacing:.18em;
+    max-width:290px;
+    margin:0 auto 16px;
+  }
+
+  .hero .script{
+    font-size:31px !important;
+  }
+
+  .hero h2{
+    margin:7px 0 0;
+    font-size:clamp(55px,18vw,78px);
+    line-height:.82;
+  }
+
+  .ornament{
+    font-size:21px;
+    margin:15px 0;
+  }
+
+  .names{
+    margin:13px auto;
+    font-size:clamp(25px,8vw,38px);
+    line-height:1.05;
+  }
+
+  .date-line{
+    width:100%;
+    max-width:330px;
+    margin:16px auto 0;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:5px;
+    font-size:12px;
+    line-height:1.3;
+    letter-spacing:.12em;
+  }
+
+  .date-line i{
+    width:32px;
+    height:1px;
+    margin:3px auto;
+  }
+
+  .couple-photo-wrap{
+    width:100%;
+    max-width:360px;
+    margin:20px auto 4px;
+    padding:0;
+  }
+
+  .couple-photo{
+    width:100%;
+    max-width:360px;
+    max-height:285px;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .scroll-note{
+    margin-top:25px;
+    font-size:8px;
+    letter-spacing:.13em;
+  }
+
+  /* Story */
+  #story{
+    padding-top:85px;
