@@ -1972,7 +1972,7 @@ html body #intro {
 <!-- ============ IMAGE-BASED ENVELOPE OPENING EXPERIENCE ============ -->
 <div id="intro" aria-label="Invitation opening">
   <div class="envelope-stage">
-    <div class="scene-eyebrow">We invite you — our forever begins inside.</div>
+    <div class="scene-eyebrow">We invite you — our forever begins inside</div>
 
     <div class="image-envelope-wrap" id="envelopeWrap">
       <div class="image-envelope" id="envelope">
@@ -2090,6 +2090,8 @@ html body #intro {
           <span class="family-indent">&amp; V.T ABHINAV SHANKAR</span>
         </div>
         <div class="warm-regards-handshake">&#129309;</div>
+        <!-- small boy waving hi — welcomes the second family -->
+        <div class="warm-regards-boy">&#128102; &#128075;</div>
         <div class="warm-regards-names family-two">S.MEGANATHAN &amp; M. LATHA</div>
       </div>
       <div class="ornament">&#9825;</div>
@@ -2471,12 +2473,19 @@ document.body.style.overflow='hidden';
   font-size:18px;
   line-height:1;
 }
+/* wave-and-smile friend: sits right under the handshake, above family two */
+.warm-regards-boy{
+  margin:0 0 6px;
+  font-size:18px;
+  line-height:1;
+}
 @media(max-width:760px){
   .warm-regards{margin-top:26px;}
   .warm-regards-title{font-size:10px;letter-spacing:.2em;}
   .warm-regards-names{font-size:9px;line-height:1.7;letter-spacing:.08em;}
   .warm-regards-names .family-indent{margin-left:3.2em;}
   .warm-regards-handshake{font-size:16px;margin:9px 0 7px;}
+  .warm-regards-boy{font-size:16px;margin:0 0 5px;}
 }
 </style>
 
@@ -3463,11 +3472,27 @@ html.card-embed, html.card-embed body{ overflow:hidden !important; background:tr
 }
 #details .warm-regards-handshake{
   font-size:clamp(12px,1.9svh,17px) !important;
-  margin:.6svh 0 !important;
+  /* bottom margin trimmed — the waving boy now sits directly under the handshake */
+  margin:.6svh 0 .1svh !important;
+}
+/* Small boy waving hi — friendly welcome for the second family.
+   One compact line so #details still fits exactly one screen (height:100svh, overflow:hidden). */
+#details .warm-regards-boy{
+  font-size:clamp(11px,1.75svh,16px) !important;
+  line-height:1 !important;
+  margin:.1svh 0 .5svh !important;
 }
 @media (max-width:760px){
   #details .closing-block{ margin-top:4.6svh !important; padding-top:2svh !important; }
   #details .warm-regards-names{ font-size:clamp(10px,1.5svh,13px) !important; }
+}
+/* Ultra-short viewports (very small desktop windows, landscape phones):
+   tighten the regards cluster so the 100svh section never clips it. */
+@media (max-height:500px){
+  #details .closing-block{ margin-top:2.2svh !important; padding-top:.8svh !important; }
+  #details .warm-regards-title{ margin-bottom:.4svh !important; }
+  #details .warm-regards-handshake{ margin:.2svh 0 0 !important; }
+  #details .warm-regards-boy{ margin:.1svh 0 .2svh !important; }
 }
 </style>
 
