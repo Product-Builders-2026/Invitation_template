@@ -181,7 +181,7 @@ document.getElementById('calendarBtn').addEventListener('click',()=>{
 
 /* Native share where supported */
 document.getElementById('shareBtn').addEventListener('click',async()=>{
-  const link=location.origin+location.pathname;
+  const link=document.querySelector('meta[property="og:url"]').content;
   const data={
     title:'Ravi Adhithya & Haripritha — Engagement',
     text:'You are invited to celebrate our engagement on 1 November 2026 at Preethika Mahal, Chennai.',
