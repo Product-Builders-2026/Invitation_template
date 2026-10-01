@@ -1798,14 +1798,21 @@ footer {
 }
 
 /* Keep the opening text clearly separated from the envelope. */
+/* Keep the heading behind the envelope/card while the card is pulled out.
+   The envelope wrapper is a stacking context because of its animation, so
+   the heading must sit in a lower sibling stacking layer. */
 .scene-eyebrow{
   position:relative !important;
   top:auto !important;
   left:auto !important;
   right:auto !important;
-  z-index:20 !important;
+  z-index:1 !important;
   margin:0 0 26px !important;
   pointer-events:none;
+}
+.image-envelope-wrap{
+  position:relative !important;
+  z-index:2 !important;
 }
 
 .scene-instruction{
