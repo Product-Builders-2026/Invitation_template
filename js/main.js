@@ -192,20 +192,20 @@ document.getElementById('calendarBtn').addEventListener('click',()=>{
 
 /* Native share where supported */
 document.getElementById('shareBtn').addEventListener('click',async()=>{
-  const link=new URL(window.location.href); link.hash=''; link.search=''; const shareUrl=link.toString();
+  const link=document.querySelector('meta[property="og:url"]').content;
   const data={
     title:'Ravi Adhithya & Haripritha — Engagement',
     text:'You are invited to celebrate our engagement on 1 November 2026 at Preethika Mahal, Chennai.',
-    url:shareUrl
+    url:link
   };
   if(navigator.share){
     try{await navigator.share(data);return}catch(e){}
   }
   try{
-    await navigator.clipboard.writeText(shareUrl);
-    alert('Invitation link copied:\n'+shareUrl);
+    await navigator.clipboard.writeText(link);
+    alert('Invitation link copied:\n'+link);
   }catch(e){
-    prompt('Copy the invitation link:',shareUrl);
+    prompt('Copy the invitation link:',link);
   }
 });
 
