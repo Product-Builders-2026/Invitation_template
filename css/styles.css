@@ -3448,3 +3448,23 @@ html body #intro.plain-bg{
 @media (prefers-reduced-motion:reduce){
   .scroll-ring-img{ animation:none !important; }
 }
+
+/* =========================================================
+   MOBILE FIX — page 3 (Details): keep the heading and the first
+   paragraph clear of the hanging garlands in the top corners.
+   Only side padding on these two blocks; nothing else moves.
+   ========================================================= */
+@media (max-width:760px){
+  html body #details .details h3{
+    padding-left:14% !important;
+    padding-right:14% !important;
+    box-sizing:border-box !important;
+    margin-top:-12px !important;
+  }
+  html body #details .details .lead{
+    padding-left:10% !important;
+    padding-right:10% !important;
+    box-sizing:border-box !important;
+    margin-bottom:8px !important;
+  }
+}
