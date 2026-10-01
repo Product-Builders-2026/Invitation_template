@@ -134,10 +134,21 @@ letterCard.addEventListener('keydown',e=>{
   const ifr=document.createElement('iframe');
   ifr.src=u.toString(); ifr.title=''; ifr.tabIndex=-1; ifr.setAttribute('aria-hidden','true');
   ifr.style.width=VW+'px'; ifr.style.height=VH+'px';
-  holder.appendChild(ifr);
   function fit(){ ifr.style.setProperty('--s',(card.clientWidth/VW).toFixed(5)); }
-  fit(); addEventListener('resize',fit); addEventListener('load',fit);
+  /* Mount the miniature only after the main page has loaded, so the envelope
+     screen gets all the bandwidth first. It is hidden until the envelope opens. */
+  let mounted=false;
+  function mount(){
+    if(mounted)return; mounted=true;
+    holder.appendChild(ifr); fit();
+  }
+  addEventListener('resize',fit); addEventListener('load',fit);
   if(window.ResizeObserver) new ResizeObserver(fit).observe(card);
+  function later(){ (window.requestIdleCallback||function(f){setTimeout(f,300)})(mount,{timeout:1500}); }
+  if(document.readyState==='complete') later(); else addEventListener('load',later);
+  /* safety: guest opens the envelope before idle fires */
+  if(waxSeal) waxSeal.addEventListener('click',mount);
+  if(letterSlot) letterSlot.addEventListener('click',mount);
 })();
 
 /* Scroll reveals */
